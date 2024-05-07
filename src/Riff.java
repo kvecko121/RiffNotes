@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class RiffModelManager
+public class Riff
 {
   private String E;
   private String A;
@@ -9,43 +9,43 @@ public class RiffModelManager
   private String B;
   private String e;
 
-  public RiffModelManager(){
-    this.E = "E: ";
-    this.A = "A: ";
-    this.D = "D: ";
-    this.G = "G: ";
-    this.B = "B: ";
-    this.e = "e: ";
+  public Riff(){
+    this.E = "E | ";
+    this.A = "A | ";
+    this.D = "D | ";
+    this.G = "G | ";
+    this.B = "B | ";
+    this.e = "e | ";
   }
 
   public void strumMute(){
-    E+="x";
-    A+="x";
-    D+="x";
-    G+="x";
-    B+="x";
-    e+="x";
+    E+="x ";
+    A+="x ";
+    D+="x ";
+    G+="x ";
+    B+="x ";
+    e+="x ";
   }
 
   public void strumMute(String note){
     switch (note){
       case "E":
-        E+="x";
+        E+="x ";
         break;
       case "A":
-        A+="x";
+        A+="x ";
         break;
       case "D":
-        D+="x";
+        D+="x ";
         break;
       case "G":
-        G+="x";
+        G+="x ";
         break;
       case "B":
-        B+="x";
+        B+="x ";
         break;
       case "e":
-        e+="x";
+        e+="x ";
         break;
     }
   }
@@ -57,133 +57,182 @@ public class RiffModelManager
     else {
       switch (note){
         case "E":
-          E+="x";
+          E+="x ";
           break;
         case "A":
-          A+="x";
+          A+="x ";
           break;
         case "D":
-          D+="x";
+          D+="x ";
           break;
         case "G":
-          G+="x";
+          G+="x ";
           break;
         case "B":
-          B+="x";
+          B+="x ";
           break;
         case "e":
-          e+="x";
+          e+="x ";
           break;
       }
 
       switch (note2){
         case "E":
-          E+="x";
+          E+="x ";
           break;
         case "A":
-          A+="x";
+          A+="x ";
           break;
         case "D":
-          D+="x";
+          D+="x ";
           break;
         case "G":
-          G+="x";
+          G+="x ";
           break;
         case "B":
-          B+="x";
+          B+="x ";
           break;
         case "e":
-          e+="x";
+          e+="x ";
           break;
       }
     }
   }
 
-  public void pickEE(int n){
-    E+=n;
+  public void pickE(int n)
+  {
+    String picked = String.valueOf(n);
+    if (picked.length() >= 2)
+    {
+      E += picked;
+    }
+    else
+    {
+      E += picked + " ";
+    }
   }
   public void pickA(int n){
-    A+=n;
+    String picked = String.valueOf(n);
+    if (picked.length() >= 2)
+    {
+      A += picked;
+    }
+    else
+    {
+      A += picked + " ";
+    }
   }
   public void pickD(int n){
-    D+=n;
+    String picked = String.valueOf(n);
+    if (picked.length() >= 2)
+    {
+      D += picked;
+    }
+    else
+    {
+      D += picked + " ";
+    }
   }
   public void pickG(int n){
-    G+=n;
+    String picked = String.valueOf(n);
+    if (picked.length() >= 2)
+    {
+      G += picked;
+    }
+    else
+    {
+      G += picked + " ";
+    }
   }
   public void pickB(int n){
-    E+=n;
+    String picked = String.valueOf(n);
+    if (picked.length() >= 2)
+    {
+      B += picked;
+    }
+    else
+    {
+      B += picked + " ";
+    }
   }
-  public void pickE(int n){
-    e+=n;
+  public void picke(int n){
+    String picked = String.valueOf(n);
+    if (picked.length() >= 2)
+    {
+      e += picked;
+    }
+    else
+    {
+      e += picked + " ";
+    }
   }
   public void strumPause(){
-    E+="-";
-    A+="-";
-    D+="-";
-    G+="-";
-    B+="-";
-    e+="-";
+    E+="- ";
+    A+="- ";
+    D+="- ";
+    G+="- ";
+    B+="- ";
+    e+="- ";
   }
 
   public void strumPause(String note){
     switch (note){
       case "E":
-        E+="-";
+        E+="- ";
         break;
       case "A":
-        A+="-";
+        A+="- ";
         break;
       case "D":
-        D+="-";
+        D+="- ";
         break;
       case "G":
-        G+="-";
+        G+="- ";
         break;
       case "B":
-        B+="-";
+        B+="- ";
         break;
       case "e":
-        e+="-";
+        e+="- ";
         break;
     }
   }
 
 
   public void strumEm(){
-    E+="0";
-    A+="2";
-    D+="2";
-    G+="0";
-    B+="0";
-    e+="0";
+    E+="0 ";
+    A+="2 ";
+    D+="2 ";
+    G+="0 ";
+    B+="0 ";
+    e+="0 ";
   }
 
   public void strumE(){
-    E+="0";
-    A+="2";
-    D+="2";
-    G+="1";
-    B+="0";
-    e+="0";
+    E+="0 ";
+    A+="2 ";
+    D+="2 ";
+    G+="1 ";
+    B+="0 ";
+    e+="0 ";
   }
 
   public void strumAm(){
-    E+="0";
-    A+="0";
-    D+="2";
-    G+="2";
-    B+="1";
-    e+="0";
+    E+="0 ";
+    A+="0 ";
+    D+="2 ";
+    G+="2 ";
+    B+="1 ";
+    e+="0 ";
   }
 
   public void strumC(){
-    E+="x";
-    A+="3";
-    D+="2";
-    G+="0";
-    B+="1";
-    e+="0";
+    E+="x ";
+    A+="3 ";
+    D+="2 ";
+    G+="0 ";
+    B+="1 ";
+    e+="0 ";
   }
 
 
@@ -208,45 +257,52 @@ public class RiffModelManager
         }
       }
     }
-    System.out.println(Arrays.toString(arr));
     int finSize = arr[5];
 
-    int todoE = finSize - E.length();
+    int todoE = (finSize - E.length())/2;
     for (int i = 0; i < todoE; i++)
     {
       strumPause("E");
     }
 
-    int todoA = finSize - A.length();
+    int todoA = (finSize - A.length())/2;
     for (int i = 0; i < todoA; i++)
     {
       strumPause("A");
     }
 
-    int todoD = finSize - D.length();
+    int todoD = (finSize - D.length())/2;
     for (int i = 0; i < todoD; i++)
     {
       strumPause("D");
     }
 
-    int todoG = finSize - G.length();
+    int todoG = (finSize - G.length())/2;
     for (int i = 0; i < todoG; i++)
     {
       strumPause("G");
     }
 
-    int todoB = finSize - B.length();
+    int todoB = (finSize - B.length())/2;
     for (int i = 0; i < todoB; i++)
     {
       strumPause("B");
     }
 
-    int todoe = finSize - e.length();
+    int todoe = (finSize - e.length())/2;
     for (int i = 0; i < todoe; i++)
     {
       strumPause("e");
     }
+  }
 
+  public void end(){
+    E+="|";
+    A+="|";
+    D+="|";
+    G+="|";
+    B+="|";
+    e+="|";
 
   }
 
