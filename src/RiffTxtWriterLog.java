@@ -28,26 +28,7 @@ public class RiffTxtWriterLog
   public ArrayList<Riff> getLogs(){
     return riffs;
   }
-
-//  public void addLog(String content, String sender, long timestamp, String ip){
-//    Riff r = new Message(content, sender, timestamp);
-//    this.logs.add(message);
-//    addToFile(message, ip);
-//  }
-//  //message as a parameter
-//  public void addLog(Message m, String ip){
-//    this.logs.add(m);
-//    addToFile(m, ip);
-//  }
-//
-//  //method for testing without timestamp as a parameter
-//  public void addLog(String content, String sender, String ip){
-//    long timestamp = TimestampManipulation.getCurrentTimestamp();
-//    Message message = new Message(content, sender, timestamp);
-//    this.logs.add(message);
-//    addToFile(message, ip);
-//  }
-
+  
   public void addToFile(Riff riff, String title){
     if(riff==null){
       return;

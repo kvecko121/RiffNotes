@@ -19,33 +19,33 @@ public class Riff
   }
 
   public void strumMute(){
-    E+="x ";
-    A+="x ";
-    D+="x ";
-    G+="x ";
-    B+="x ";
-    e+="x ";
+    E+=" x ";
+    A+=" x ";
+    D+=" x ";
+    G+=" x ";
+    B+=" x ";
+    e+=" x ";
   }
 
   public void strumMute(String note){
     switch (note){
       case "E":
-        E+="x ";
+        E+=" x ";
         break;
       case "A":
-        A+="x ";
+        A+=" x ";
         break;
       case "D":
-        D+="x ";
+        D+=" x ";
         break;
       case "G":
-        G+="x ";
+        G+=" x ";
         break;
       case "B":
-        B+="x ";
+        B+=" x ";
         break;
       case "e":
-        e+="x ";
+        e+=" x ";
         break;
     }
   }
@@ -57,43 +57,43 @@ public class Riff
     else {
       switch (note){
         case "E":
-          E+="x ";
+          E+=" x ";
           break;
         case "A":
-          A+="x ";
+          A+=" x ";
           break;
         case "D":
-          D+="x ";
+          D+=" x ";
           break;
         case "G":
-          G+="x ";
+          G+=" x ";
           break;
         case "B":
-          B+="x ";
+          B+=" x ";
           break;
         case "e":
-          e+="x ";
+          e+=" x ";
           break;
       }
 
       switch (note2){
         case "E":
-          E+="x ";
+          E+=" x ";
           break;
         case "A":
-          A+="x ";
+          A+=" x ";
           break;
         case "D":
-          D+="x ";
+          D+=" x ";
           break;
         case "G":
-          G+="x ";
+          G+=" x ";
           break;
         case "B":
-          B+="x ";
+          B+=" x ";
           break;
         case "e":
-          e+="x ";
+          e+=" x ";
           break;
       }
     }
