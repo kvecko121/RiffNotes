@@ -1,5 +1,5 @@
+package model;
 
-import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class RiffTxtWriterLog
     return instance;
   }
 
-  public ArrayList<Riff> getLogs(){
+  public ArrayList<Riff> getRiffs(){
     return riffs;
   }
   
@@ -35,7 +35,7 @@ public class RiffTxtWriterLog
     }
     //BufferedWriter out = null;
     try{
-      String filename = ".\\Riffs\\Riff-"+title+".txt";
+      String filename = ".\\Riffs\\model.Riff-"+title+".txt";
       FileWriter file = new FileWriter(filename);
       PrintWriter output = new PrintWriter(file, true);
       output.println(riff.tabToString());

@@ -1,3 +1,6 @@
+import model.Riff;
+import model.RiffTxtWriterLog;
+
 public class Test
 {
   public static void main(String[] args)
@@ -19,11 +22,13 @@ public class Test
     r.pickE(20);
     r.strumFin();
 
+
+
     r.end();
     System.out.println(r.tabToString());
 
     RiffTxtWriterLog writer = RiffTxtWriterLog.getInstance();
-    writer.addToFile(r,"Ovlov_Strokes");
+    writer.addToFile(r,"Test_E");
 
   }
 }

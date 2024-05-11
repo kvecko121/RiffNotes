@@ -1,3 +1,5 @@
+package model;
+
 import java.util.Arrays;
 
 public class Riff
@@ -102,137 +104,137 @@ public class Riff
   public void pickE(int n)
   {
     String picked = String.valueOf(n);
-    if (picked.length() >= 2)
-    {
-      E += picked;
-    }
-    else
-    {
-      E += picked + " ";
+    switch (picked.length()){
+      case 1:
+        E += " " + picked + " ";
+        break;
+      case 2:
+        E += picked + " ";
+        break;
     }
   }
   public void pickA(int n){
     String picked = String.valueOf(n);
-    if (picked.length() >= 2)
-    {
-      A += picked;
-    }
-    else
-    {
-      A += picked + " ";
+    switch (picked.length()){
+      case 1:
+        A += " " + picked + " ";
+        break;
+      case 2:
+        A += picked + " ";
+        break;
     }
   }
   public void pickD(int n){
     String picked = String.valueOf(n);
-    if (picked.length() >= 2)
-    {
-      D += picked;
-    }
-    else
-    {
-      D += picked + " ";
+    switch (picked.length()){
+      case 1:
+        D += " " + picked + " ";
+        break;
+      case 2:
+        D += picked + " ";
+        break;
     }
   }
   public void pickG(int n){
     String picked = String.valueOf(n);
-    if (picked.length() >= 2)
-    {
-      G += picked;
-    }
-    else
-    {
-      G += picked + " ";
+    switch (picked.length()){
+      case 1:
+        G += " " + picked + " ";
+        break;
+      case 2:
+        G += picked + " ";
+        break;
     }
   }
   public void pickB(int n){
     String picked = String.valueOf(n);
-    if (picked.length() >= 2)
-    {
-      B += picked;
-    }
-    else
-    {
-      B += picked + " ";
+    switch (picked.length()){
+      case 1:
+        B += " " + picked + " ";
+        break;
+      case 2:
+        B += picked + " ";
+        break;
     }
   }
   public void picke(int n){
     String picked = String.valueOf(n);
-    if (picked.length() >= 2)
-    {
-      e += picked;
-    }
-    else
-    {
-      e += picked + " ";
+    switch (picked.length()){
+      case 1:
+        e += " " + picked + " ";
+        break;
+      case 2:
+        e += picked + " ";
+        break;
     }
   }
   public void strumPause(){
-    E+="- ";
-    A+="- ";
-    D+="- ";
-    G+="- ";
-    B+="- ";
-    e+="- ";
+    E+=" - ";
+    A+=" - ";
+    D+=" - ";
+    G+=" - ";
+    B+=" - ";
+    e+=" - ";
   }
 
   public void strumPause(String note){
     switch (note){
       case "E":
-        E+="- ";
+        E+=" - ";
         break;
       case "A":
-        A+="- ";
+        A+=" - ";
         break;
       case "D":
-        D+="- ";
+        D+=" - ";
         break;
       case "G":
-        G+="- ";
+        G+=" - ";
         break;
       case "B":
-        B+="- ";
+        B+=" - ";
         break;
       case "e":
-        e+="- ";
+        e+=" - ";
         break;
     }
   }
 
 
   public void strumEm(){
-    E+="0 ";
-    A+="2 ";
-    D+="2 ";
-    G+="0 ";
-    B+="0 ";
-    e+="0 ";
+    E+=" 0 ";
+    A+=" 2 ";
+    D+=" 2 ";
+    G+=" 0 ";
+    B+=" 0 ";
+    e+=" 0 ";
   }
 
   public void strumE(){
-    E+="0 ";
-    A+="2 ";
-    D+="2 ";
-    G+="1 ";
-    B+="0 ";
-    e+="0 ";
+    E+=" 0 ";
+    A+=" 2 ";
+    D+=" 2 ";
+    G+=" 1 ";
+    B+=" 0 ";
+    e+=" 0 ";
   }
 
   public void strumAm(){
-    E+="0 ";
-    A+="0 ";
-    D+="2 ";
-    G+="2 ";
-    B+="1 ";
-    e+="0 ";
+    E+=" 0 ";
+    A+=" 0 ";
+    D+=" 2 ";
+    G+=" 2 ";
+    B+=" 1 ";
+    e+=" 0 ";
   }
 
   public void strumC(){
-    E+="x ";
-    A+="3 ";
-    D+="2 ";
-    G+="0 ";
-    B+="1 ";
-    e+="0 ";
+    E+=" x ";
+    A+=" 3 ";
+    D+=" 2 ";
+    G+=" 0 ";
+    B+=" 1 ";
+    e+=" 0 ";
   }
 
 
@@ -259,37 +261,37 @@ public class Riff
     }
     int finSize = arr[5];
 
-    int todoE = (finSize - E.length())/2;
+    int todoE = (finSize - E.length())/3;
     for (int i = 0; i < todoE; i++)
     {
       strumPause("E");
     }
 
-    int todoA = (finSize - A.length())/2;
+    int todoA = (finSize - A.length())/3;
     for (int i = 0; i < todoA; i++)
     {
       strumPause("A");
     }
 
-    int todoD = (finSize - D.length())/2;
+    int todoD = (finSize - D.length())/3;
     for (int i = 0; i < todoD; i++)
     {
       strumPause("D");
     }
 
-    int todoG = (finSize - G.length())/2;
+    int todoG = (finSize - G.length())/3;
     for (int i = 0; i < todoG; i++)
     {
       strumPause("G");
     }
 
-    int todoB = (finSize - B.length())/2;
+    int todoB = (finSize - B.length())/3;
     for (int i = 0; i < todoB; i++)
     {
       strumPause("B");
     }
 
-    int todoe = (finSize - e.length())/2;
+    int todoe = (finSize - e.length())/3;
     for (int i = 0; i < todoe; i++)
     {
       strumPause("e");
